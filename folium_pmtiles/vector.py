@@ -72,7 +72,7 @@ class PMTilesMapLibreLayer(JSCSSMixin, Layer):
             var {{ this.get_name() }} = L.maplibreGL({
                 pane: 'overlay_{{ this.get_name() }}',
                 style: {{ this.style|tojson}},
-                interactive: true,
+                interactive: false,
             }).addTo({{ this._parent.get_name() }});
 
             {%- endmacro %}
